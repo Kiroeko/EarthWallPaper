@@ -2,6 +2,7 @@
 #define _MAIN_H_
 
 #include <iostream>
+#include <cstdlib>
 
 #include "HttpPicDownLoad.h"
 #include "URLMake.h"

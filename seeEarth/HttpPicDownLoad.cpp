@@ -11,7 +11,7 @@ bool downPicFromURL(string url)
 	CInternetSession session;
 	CHttpFile *httpFile = (CHttpFile *)session.OpenURL(URL);
 	CStdioFile imgFile;
-	char buff[BUFFSIZE];                              // »º´æ  
+	char buff[BUFFSIZE];                              // ç¼“å­˜  
 
 	imgFile.Open("earth.png", CFile::modeCreate | CFile::modeWrite | CFile::typeBinary);
 
@@ -23,7 +23,7 @@ bool downPicFromURL(string url)
 		int size = 0;
 		do
 		{
-			size = httpFile->Read(buff, BUFFSIZE);    // ¶ÁÈ¡Í¼Æ¬  
+			size = httpFile->Read(buff, BUFFSIZE);    // è¯»å–å›¾ç‰‡  
 			imgFile.Write(buff, size);
 		} while (size > 0);
 	}

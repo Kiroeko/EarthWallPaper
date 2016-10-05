@@ -6,7 +6,7 @@ std::string getURLForHimawari8()
 {
 	stringstream ss;
 	string url("http://himawari8-dl.nict.go.jp/himawari8/img/D531106/1d/550/");
-	string backStr("_0_0.png");
+	string backStr("00_0_0.png");
 
 	time_t now = time(nullptr);;
 	tm *timeInfo = localtime(&now);
@@ -62,7 +62,19 @@ std::string getURLForHimawari8()
 	url += "/";
 
 	string hour;
-	ss << timeInfo->tm_hour;
+	int hr = (timeInfo->tm_hour);
+
+	//时差
+	if (hr >= 10)
+	{
+		hr -= 10;
+	}
+	else
+	{
+		hr = (24 + hr - 10);
+	}
+
+	ss << hr;
 	ss >> hour;
 	ss.clear();
 
@@ -84,8 +96,6 @@ std::string getURLForHimawari8()
 		url += "0";
 	}
 	url += minute;
-
-	url += "00";
 
 	url += backStr;
 

@@ -9,19 +9,18 @@ int main()
 
 	while(true)
 	{
-		fstream vep("C:\\earth.png");
+		fstream vep("C:\\earth.bmp");
 		if (vep.is_open())
 		{
 			vep.close();
 			system("del C:\\earth.bmp");
-			system("del C:\\earth.png");
 		}
 		else
 		{
 			vep.close();
 		}
 
-		if (downPicFromURL(getURLForHimawari8()))
+		if (downloadPics(getURLForHimawari8()))
 		{
 			SetWallPaper();
 

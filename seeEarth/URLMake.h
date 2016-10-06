@@ -3,8 +3,9 @@
 
 #include <string>
 #include <sstream>
+#include <vector>
 #include <ctime>
 
-std::string getURLForHimawari8();
+std::vector<std::string> getURLForHimawari8();
 
 #endif

@@ -2,11 +2,10 @@
 
 using namespace std;
 
-std::string getURLForHimawari8()
+vector<string> getURLForHimawari8()
 {
 	stringstream ss;
-	string url("http://himawari8-dl.nict.go.jp/himawari8/img/D531106/1d/550/");
-	string backStr("00_0_0.png");
+	string url("http://himawari8-dl.nict.go.jp/himawari8/img/D531106/2d/550/");
 
 	time_t now = time(nullptr);;
 	tm *timeInfo = localtime(&now);
@@ -97,7 +96,21 @@ std::string getURLForHimawari8()
 	}
 	url += minute;
 
-	url += backStr;
+	string backStr1("00_0_0.png");
+	string backStr2("00_1_0.png");
+	string backStr3("00_0_1.png");
+	string backStr4("00_1_1.png");
 
-	return url;
+	backStr1 = url + backStr1;
+	backStr2 = url + backStr2;
+	backStr3 = url + backStr3;
+	backStr4 = url + backStr4;
+
+	vector<string> urls;
+	urls.push_back(backStr1);
+	urls.push_back(backStr2);
+	urls.push_back(backStr3);
+	urls.push_back(backStr4);
+
+	return urls;
 }

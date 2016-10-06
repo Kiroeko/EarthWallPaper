@@ -6,23 +6,25 @@ int main()
 {
 	cout << "这个程序将使用向日葵8号拍摄的实时地球照片作为你的电脑桌面壁纸" << endl;
 	int i = 0;
-	bool shouldDel = false;
 
 	while(true)
 	{
-		if (shouldDel)
+		fstream vep("C:\\earth.png");
+		if (vep.is_open())
 		{
-			shouldDel = false;
-			system("cd C:\\");
-			system("del earth.bmp");
-			system("del earth.png");
+			vep.close();
+			system("del C:\\earth.bmp");
+			system("del C:\\earth.png");
+		}
+		else
+		{
+			vep.close();
 		}
 
 		if (downPicFromURL(getURLForHimawari8()))
 		{
 			SetWallPaper();
 
-			shouldDel = true;
 			++i;
 			cout << "第"<<i<<"次更新桌面壁纸" << endl;
 		}

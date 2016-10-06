@@ -2,9 +2,12 @@
 #define _HTTP_PIC_DOWNLOAD_H_
 
 #include <string>
+#include <vector>
+
 #include <afx.h>
 #include <afxinet.h>
 
-bool downPicFromURL(std::string url);
+bool downloadPics(std::vector<std::string> urls);
+bool downPicFromURL(const std::string &url, const std::string &saveName);
 
 #endif

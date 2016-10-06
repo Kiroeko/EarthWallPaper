@@ -2,6 +2,7 @@
 #define _MAIN_H_
 
 #include <iostream>
+#include <fstream>
 #include <cstdlib>
 
 #include "HttpPicDownLoad.h"

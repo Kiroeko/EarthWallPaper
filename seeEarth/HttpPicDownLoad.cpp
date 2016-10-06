@@ -13,7 +13,7 @@ bool downPicFromURL(string url)
 	CStdioFile imgFile;
 	char buff[BUFFSIZE];                              // 缓存  
 
-	imgFile.Open("earth.png", CFile::modeCreate | CFile::modeWrite | CFile::typeBinary);
+	imgFile.Open("C:\\earth.png", CFile::modeCreate | CFile::modeWrite | CFile::typeBinary);
 
 	DWORD dwStatusCode;
 	httpFile->QueryInfoStatusCode(dwStatusCode);

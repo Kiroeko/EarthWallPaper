@@ -5,7 +5,7 @@ using namespace std;
 vector<string> getURLForHimawari8()
 {
 	stringstream ss;
-	string url("http://himawari8-dl.nict.go.jp/himawari8/img/D531106/2d/550/");
+	string url("https://himawari8.nict.go.jp/img/D531106/2d/550/");
 
 	time_t now = time(nullptr);;
 	tm *timeInfo = localtime(&now);
